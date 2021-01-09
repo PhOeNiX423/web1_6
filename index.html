@@ -6,6 +6,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap.css">
     <script src="jquery-3.5.1.js"></script>
     <script src="bootstrap.bundle.js"></script>
@@ -16,7 +18,7 @@
         }
 
         .back1 {
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.6);
         }
 
         .back {
@@ -29,63 +31,214 @@
 </head>
 
 <body>
+
     <!--Шапка сайта-->
-    <div class='container-fluid back1' style="margin-top: 1%; color: white;">
-        <h1 style='font-size: 250%; font-family: "Anton", sans-serif;'> itNews <span style='font-size: 40%; font-family: "Anton", sans-serif;'><small>The most useful personal blog</small></span></h1>
+
+    <div class='container-fluid back1' style="color: white;">
+        <div class="row">
+            <div class="col-md-7 col-xs-12">
+                <h1 style='font-size: 250%; font-family: "Anton", sans-serif;'> itNews <span style='font-size: 40%; font-family: "Anton", sans-serif;'><small>The most useful blog</small></span></h1>
+            </div>
+            <div style='margin-top: 0.5%;' class="col-md-3 col-xs-12">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Информация об авторе статьи
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Опыт</a></li>
+                        <li><a class="dropdown-item" href="#">Портфолио</a></li>
+                        <li><a class="dropdown-item" href="#">Другие статьи автора</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style='margin-top: 0.5%;' class="col-md-2 col-xs-12">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Другие статьи
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Дня</a></li>
+                        <li><a class="dropdown-item" href="#">Недели</a></li>
+                        <li><a class="dropdown-item" href="#">Месяца</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+
     <!--Тело сайта-->
     <div class='container back' style="margin-top:2%; padding-top: 2%; padding-bottom: 2%;">
-        <!--Аккордион-->
-        <div class="accordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Accordion Item #2
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+        <nav style='--bs-breadcrumb-divider: ">"; font-family: "Slabo 13px", serif;' aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                <li class="breadcrumb-item"><a href="#">Статьи недели</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Взаимодействие по протоколу HTTP</li>
+            </ol>
+        </nav>
+
+        <div style='margin-top: 2%; margin-bottom: 2%;' class="container mx-auto">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <img src="images/what-is-a-computer-protocol.jpg" class="rounded img-fluid" alt="...">
+                </div>
+                <div class="col-md-8 col-xs-12">
+                    <span class='text-center'>
+                        <h1>Взаимодействие по протоколу HTTP</h1>
+                    </span>
+                    <div>
+                        <p style="margin-top: 2%;">HTTP - это протокол передачи гипертекста между распределёнными системами. По сути, http является фундаментальным элементом современного Web-а. Как уважающие себя веб разработчики, мы должны знать о нём как можно больше. <br>
+                            Давайте взглянем на этот протокол через призму нашей профессии. В первой части пройдёмся по основам, посмотрим на запросы/ответы. В следующей статье разберём уже более детальные фишки, такие как кэширование, обработка подключения и аутентификация. <br>
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Accordion Item #2
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            <div class="row">
+                <p class="fs-4" style='margin-top:2%'>
+                    Основы HTTP
+                </p>
+                <div class="alert alert-info" role="alert">
+                    <img style='width: 2%; margin-right:0.5%;' alt="..." src='images/exclamation_mark_PNG75.png'>
+                    <strong>HTTP - <span class='fst-italic'>HyperText Transfer Protocol</span> - </strong> это протокол прикладного уровня передачи данных, изначально — в виде гипертекстовых документов в формате HTML.
+                </div>
+                <p>
+                    HTTP обеспечивает общение между множеством хостов и клиентов, а также поддерживает целый ряд сетевых настроек. <br>
+                    В основном, для общения используется TCP/IP, но это не единственный возможный вариант. По умолчанию, TCP/IP использует порт 80, но можно заюзать и другие.<br>
+                    Общение между хостом и клиентом происходит в два этапа: запрос и ответ.<br> Клиент формирует HTTP запрос, в ответ на который сервер даёт ответ (сообщение). Чуть позже, мы более подробно рассмотрим эту схему работы.
+                    Текущая версия протокола HTTP - 1.1, в которой были введены некоторые новые фишки. На мой взгляд, самые важные из них это: поддержка постоянно открытого соединения, новый механизм передачи данных chunked transfer encoding, новые заголовки для кэширования. Что-то из этого мы рассмотрим во второй части данной статьи.
+                </p>
+            </div>
+            <div class="row">
+                <p class="fs-4">
+                    URL
+                </p>
+                <!--Alert-->
+                <div class="alert alert-info" role="alert">
+                    <img style='width: 2%; margin-right:0.5%;' alt="..." src='images/exclamation_mark_PNG75.png'>
+                    <strong>URL - <span class='fst-italic'>Uniform Resource Locator</span> - </strong> это адрес определённой веб-страницы или файла в Интернете. Это уникальный адрес каждого документа в Интернете, по которому пользователь может найти документ.
+                </div>
+                <p>
+                    Сердцевиной веб-общения является запрос, который отправляется через Единый указатель ресурсов (URL). Я уверен, что вы уже знаете, что такое URL адрес, однако для полноты картины, решил всё-таки сказать пару слов. Структура URL очень проста и состоит из следующих компонентов. <br>
+                    Протокол может быть как http для обычных соединений, так и https для более безопасного обмена данными. Порт по умолчанию - 80. Далее следует путь к ресурсу на сервере и цепочка параметров
+                </p>
+            </div>
+            <div class="container">
+                <div class='row'>
+                    <div class="card mb-3">
+                        <img src="images/csm_iStock-473983321_6e84ef194b.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Сервер. Нужно или необходимо?</h5>
+                            <p class="card-text">Каждый день сотрудники любого офиса непрерывно взаимодействуют с внешним миром и между собой. Такое взаимодействие происходит по средствам локальных сетей и серверов. <br>Именно сервера являются точками сосредоточения информации, именно на них хранится и обрабатывается ваша корпоративная информация, например электронные письма и общие файлы. Сервера призваны сделать вашу работу комфортной и быстрой.</p>
+                            <p class="card-text"><small class="text-muted">Статья от 20.01.2020</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Accordion Item #3
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            <div class="row">
+                <p><b>Задание.</b> Проверь себя:</p>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Что такое HTML?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">HTTP - это протокол передачи гипертекста между распределёнными системами.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Что такое URL?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">URL - это адрес определённой веб-страницы или файла в Интернете.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                Виды протокола HTTP
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">HTTP - это обычный протокол. <br> HTTPS – тот же протокол, но со встроенным шифровальщиком: добавочная буква «S» в аббревиатуре означает «Secure», то есть «безопасный».</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <div class="row">
+                <p><b>Приложение.</b> Интересное видео про модель OSI:</p>
+            </div>
 
+            <div class='container'>
+                <div class="ratio ratio-16x9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/je0QFU7p5Oo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+                </div>
+            </div>
+            <div class="container" style='margin-top:2%; margin-bottom: 2%;'>
+                <div class="row center-block">
+                    <button type="button" class="btn btn-outline-danger">Поделиться статьей</button>
+                </div>
+            </div>
+
+            <!--Share-->
+            <div class='container'>
+                <div class='row' style="margin-bottom: 1%;">
+                    <div class="col-md-1 col-xs-12 col-sm-12" style="padding-left: 2%;">
+                        <img style='width: 100px;' alt='...' src='images/photo.png'>
+                    </div>
+                    <div class='col-md-11 col-xs-12 col-sm-12' style='padding-top: 1.5%;'>
+                        <p class='fw-light fs-2' style="padding-left: 2%;">Автор <b>сайта</b> - Натальина Дарья - Web Developer</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Some more-->
+            <div class="container" style="margin-top: 2%; margin-bottom: 2%;">
+                <div class="row center-block">
+                    <p class='fs-2'>Рекомендуем: </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/shocked-startled-impressed-office-worker-male-entrepreneur-sitting-desk-staring-laptop-screen-speechless-reading-big-news.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Как работает реклама и почему она необходима в 21 веке?</h5>
+                                <p class="card-text">Как давно Вы видели рекламу по телевизору? <br> Почему же она продолжает нам надоедать и сейчас, хотя почти все забросили "ящики" и перешли в Интернет? </p>
+                                <a href="#" class="btn btn-primary">Перейти</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/website-html-code-browser-view-printed-on-white-paper-closeup-view.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">JavaScript <br> Заметки бывалого программиста</h5>
+                                <p class="card-text"> Я очень давно откладывал эту тему для обзора, но её день настал...</p>
+                                <a href="#" class="btn btn-primary">Перейти</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/futuristic-background-with-green-letters.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Матрица в реальности</h5>
+                                <p class="card-text">Как добиться этого легендарного эффекта из фильма "Матрица" в обычном терминале...</p>
+                                <a href="#" class="btn btn-primary">Перейти</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
-
-
-
-
-
-
-
+    </div>
 </body>
 
 </html>
